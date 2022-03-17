@@ -1,22 +1,20 @@
 @import "../../css/base.css";
+@import "../../config/colorConfig.less";
 
-@themeColor:#51B257;
 
 #nav-bar{
-    height: 140px;
+      height: 140px;
     //background-color: red;
     .content{
-        width: 1205px;
         height: 100%;
-        margin: 0 auto;
         display: flex;
-        padding: 15px;
+        padding-top: 15px;
         .top{
             height: 85px;
             width: 100%;
             //background-color: orange;
             display: flex;
-            .left{
+            &>.left{
                 flex: 1;
                 //background-color: gray;
                 .logo{
@@ -36,7 +34,7 @@
                     }
                 }
             }
-            .center{
+            &>.center{
                 flex: 2;
                 //background-color: green;
                 .search-bar{
@@ -94,9 +92,82 @@
                     }
                 }
             }
-            .right{
+            &>.right{
                 flex: 1;
                 //background-color: blue;
+                display: flex;
+                justify-content: flex-end;
+                .intro{
+                    width: fit-content;
+                    height: 60px;
+                    //background-color: cyan;
+                    position: relative;
+                    &:hover{
+                        .operation-pane{
+                            display: block;
+                        }
+                    }
+                    .user{
+                        width: fit-content;
+                        height: 32px;
+                        //background-color: red;
+                        display: flex;
+                        align-items: center;
+                        .nick-name{
+                            margin-right: 10px;
+                            font-size: 16px;
+                            color: #666;
+                        }
+                        .header{
+                            width: 32px;
+                            height: 32px;
+                            border-radius: 16px;
+                        }
+                    }
+                    .operation-pane{
+                        width: 160px;
+                        //height: 300px;
+                        border: 1px solid #eee;
+                        background-color: #fff;
+                        position: absolute;
+                        right: 0;
+                        top: 50px;
+                        display: none;
+                        box-shadow: 5px 6px 7px 1px grey;
+                        //box-sizing: border-box;
+                        &:after{
+                            content: "";
+                            border: 10px solid transparent;
+                            border-bottom-color: #fff;
+                            position: absolute;
+                            right: 10px;
+                            top: -20px;
+                        }
+                        .operation{
+                            padding: 5px;
+                            li{
+                                line-height: 34px;
+                                padding: 0 5px;
+                                font-size: 12px;
+                                color: #666;
+                                a{
+                                    font-size: 12px;
+                                    color: #666;
+                                }
+                                &:first-child{
+                                    border-bottom: 1px solid #eaeaea;
+                                }
+                                &:last-child{
+                                    border-bottom: 1px solid #eaeaea;
+                                }
+                                &:hover{
+                                    background-color: #f3f4f6;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
         .bottom{

@@ -3,26 +3,24 @@
   height: 140px;
 }
 #nav-bar .content {
-  width: 1205px;
   height: 100%;
-  margin: 0 auto;
   display: flex;
-  padding: 15px;
+  padding-top: 15px;
 }
 #nav-bar .content .top {
   height: 85px;
   width: 100%;
   display: flex;
 }
-#nav-bar .content .top .left {
+#nav-bar .content .top > .left {
   flex: 1;
 }
-#nav-bar .content .top .left .logo {
+#nav-bar .content .top > .left .logo {
   width: 193px;
   height: 65px;
   margin: 0;
 }
-#nav-bar .content .top .left .logo a {
+#nav-bar .content .top > .left .logo a {
   width: 100%;
   height: 100%;
   display: block;
@@ -32,10 +30,10 @@
   background-repeat: no-repeat;
   background-position: center center;
 }
-#nav-bar .content .top .center {
+#nav-bar .content .top > .center {
   flex: 2;
 }
-#nav-bar .content .top .center .search-bar {
+#nav-bar .content .top > .center .search-bar {
   width: 400px;
   height: 40px;
   margin: 0 auto;
@@ -45,12 +43,12 @@
   box-sizing: border-box;
   overflow: hidden;
 }
-#nav-bar .content .top .center .search-bar .bar-left {
+#nav-bar .content .top > .center .search-bar .bar-left {
   background-color: cyan;
   width: 100%;
   flex: 1;
 }
-#nav-bar .content .top .center .search-bar .bar-left select {
+#nav-bar .content .top > .center .search-bar .bar-left select {
   width: 100%;
   height: 100%;
   border: none;
@@ -59,12 +57,12 @@
   font-size: 15px;
   color: #666;
 }
-#nav-bar .content .top .center .search-bar .bar-center {
+#nav-bar .content .top > .center .search-bar .bar-center {
   background-color: darkcyan;
   width: 100%;
   flex: 4;
 }
-#nav-bar .content .top .center .search-bar .bar-center input {
+#nav-bar .content .top > .center .search-bar .bar-center input {
   width: 100%;
   height: 100%;
   padding: 0 0 0 10px;
@@ -73,12 +71,12 @@
   color: #666;
   font-size: 14px;
 }
-#nav-bar .content .top .center .search-bar .bar-right {
+#nav-bar .content .top > .center .search-bar .bar-right {
   background-color: darkblue;
   width: 100%;
   flex: 1;
 }
-#nav-bar .content .top .center .search-bar .bar-right input {
+#nav-bar .content .top > .center .search-bar .bar-right input {
   width: 100%;
   height: 100%;
   border: none;
@@ -88,8 +86,75 @@
   font-size: 13px;
   cursor: pointer;
 }
-#nav-bar .content .top .right {
+#nav-bar .content .top > .right {
   flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+#nav-bar .content .top > .right .intro {
+  width: fit-content;
+  height: 60px;
+  position: relative;
+}
+#nav-bar .content .top > .right .intro:hover .operation-pane {
+  display: block;
+}
+#nav-bar .content .top > .right .intro .user {
+  width: fit-content;
+  height: 32px;
+  display: flex;
+  align-items: center;
+}
+#nav-bar .content .top > .right .intro .user .nick-name {
+  margin-right: 10px;
+  font-size: 16px;
+  color: #666;
+}
+#nav-bar .content .top > .right .intro .user .header {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+}
+#nav-bar .content .top > .right .intro .operation-pane {
+  width: 160px;
+  border: 1px solid #eee;
+  background-color: #fff;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  display: none;
+  box-shadow: 5px 6px 7px 1px grey;
+}
+#nav-bar .content .top > .right .intro .operation-pane:after {
+  content: "";
+  border: 10px solid transparent;
+  border-bottom-color: #fff;
+  position: absolute;
+  right: 10px;
+  top: -20px;
+}
+#nav-bar .content .top > .right .intro .operation-pane .operation {
+  padding: 5px;
+}
+#nav-bar .content .top > .right .intro .operation-pane .operation li {
+  line-height: 34px;
+  padding: 0 5px;
+  font-size: 12px;
+  color: #666;
+}
+#nav-bar .content .top > .right .intro .operation-pane .operation li a {
+  font-size: 12px;
+  color: #666;
+}
+#nav-bar .content .top > .right .intro .operation-pane .operation li:first-child {
+  border-bottom: 1px solid #eaeaea;
+}
+#nav-bar .content .top > .right .intro .operation-pane .operation li:last-child {
+  border-bottom: 1px solid #eaeaea;
+}
+#nav-bar .content .top > .right .intro .operation-pane .operation li:hover {
+  background-color: #f3f4f6;
+  cursor: pointer;
 }
 #nav-bar .content .bottom {
   flex: 1;
