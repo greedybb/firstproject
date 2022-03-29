@@ -1,0 +1,10 @@
+@import "../../css/base.css";
+.footer {
+  height: 185px;
+  background-color: #474443;
+}
+.footer .content {
+  background-color: darkcyan;
+  height: 100%;
+}
+/*# sourceMappingURL=index.css.map */
